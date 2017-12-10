@@ -14,11 +14,12 @@
     <div class="col-xs-12">
       <button class="btn btn-primary" (click)="toggleDisplay()">Display Details</button>
       <label>Number of Clicks: {{ numOfClicks }}</label>
-      <p 
-        [ngStyle]="{display: isHidden ? 'block' : 'none', backgroundColor: numOfClicks > 4 ? 'blue' : 'none'}"
-        [ngClass]="{styled: numOfClicks > 4}">
-        {{ secretPassword }}
-      </p>
+      <p *ngIf="isHidden">{{ secretPassword }}</p>
+      <div *ngFor="let logItem of logItems" 
+      [ngStyle]="{backgroundColor: logItem > 4 ? 'blue' : 'none'}"
+      [ngClass]="{styled: logItem > 4}">
+        {{ logItem }}
+      </div>
     </div>
   </div>
 </div>

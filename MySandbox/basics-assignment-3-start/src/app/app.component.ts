@@ -8,11 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   secretPassword = 'Secret Password is tuna';
   isHidden = false;
-  numOfClicks = 0;
-  logClick = [];
+  logItems = [];
 
   toggleDisplay() {
     this.isHidden = !this.isHidden;
-    this.logClick.push(++this.numOfClicks);
+    this.logItems.push(this.logItems.length + 1);
   }
 }

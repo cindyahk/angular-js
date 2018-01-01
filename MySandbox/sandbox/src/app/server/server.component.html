@@ -1,0 +1,10 @@
+<!-- String interpolation -->
+<p>ServerId is {{ serverId }}</p>
+<p 
+    [ngStyle]="{backgroundColor: getColor()}"
+    [ngClass]="{online: serverStatus === 'online'}">
+    Server Status is {{ getServerStatus() }}
+</p>
+
+
+

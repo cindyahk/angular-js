@@ -21,8 +21,8 @@
   </div>
   <div class="row">
     <div class="col-xs-12">
-      <app-even *ngIf="number >= 0 && number % 2 == 0" [newNum]="number"></app-even>
-      <app-odd *ngIf="number >= 0 && number % 2 != 0" [newNum]="number"></app-odd>
+      <app-even *ngFor="let evenNum of evenNumbers" [newNum]="evenNum"></app-even>
+      <app-odd *ngFor="let oddNum of oddNumbers" [newNum]="oddNum"></app-odd>
     </div>
   </div>
 </div>
